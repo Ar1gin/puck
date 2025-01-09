@@ -1,9 +1,11 @@
 
 #include <QApplication>
 #include <QtQuick/QQuickView>
-#include<QQmlApplicationEngine>
+#include <QQmlApplicationEngine>
 int main(int argc, char *argv[]) {
-  QGuiApplication app(argc, argv);
-  QQmlApplicationEngine engine("qrc:///App.qml");
-  return QApplication::exec();
+  // QGuiApplication app(argc, argv);
+  QApplication app(argc, argv);
+  app.setWindowIcon(QIcon(":/icon.png"));
+  QQmlApplicationEngine engine(":/App.qml");
+  return app.exec();
 }

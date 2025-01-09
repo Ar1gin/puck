@@ -2,5 +2,8 @@
 	<qresource prefix="/">
 		<file>App.qml</file>
 		<file>KeyboardButton.qml</file>
+		<file>ButtonText.qml</file>
+		<file>ArrowScroller.qml</file>
+		<file>icon.png</file>
 	</qresource>
 </RCC>

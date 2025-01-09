@@ -64,12 +64,11 @@ Item {
 			id: area
 			anchors.fill: parent
 			mouseEnabled: true
-			property var min_distance: 64
 			onReleased: (touchPoints) => {
 				for(var i = 0; i < touchPoints.length; i++) {
 					var dx = touchPoints[i].x - touchPoints[i].startX
 					var dy = touchPoints[i].y - touchPoints[i].startY
-					if(dx*dx + dy*dy > area.min_distance*area.min_distance) {
+					if(dx*dx + dy*dy > 32*32) {
 						if(dx > 0) {
 							if(dy > 0) {
 								item.keyboard.buttonClicked(keys[4])
